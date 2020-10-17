@@ -1,4 +1,4 @@
-package com.example.meu_emocional
+package com.example.todo_app
 
 import io.flutter.embedding.android.FlutterActivity
 
