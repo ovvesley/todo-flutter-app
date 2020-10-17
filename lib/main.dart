@@ -54,7 +54,18 @@ class _HomePageState extends State<HomePage> {
         body: ListView.builder(
             itemCount: widget.items.length,
             itemBuilder: (BuildContext context, int index) {
-              return Text(widget.items[index].title);
+              final item = widget.items[index];
+
+              return CheckboxListTile(
+                key: Key(index.toString()),
+                value: item.done,
+                onChanged: (value) {
+                  setState(() {
+                    item.done = value;
+                  });
+                },
+                title: Text(item.title),
+              );
             }));
   }
 }
